@@ -1,0 +1,87 @@
+*
+{
+  box-sizing: border-box;
+}
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+input
+{
+  text-align: right;
+}
+header
+{
+  position: fixed;
+  top:0;
+  left:0;
+  min-height: 70px;
+  -webkit-box-shadow: 0px 3px 5px -1px rgba(128,126,128,1);
+  -moz-box-shadow: 0px 3px 5px -1px rgba(128,126,128,1);
+  box-shadow: 0px 3px 5px -1px rgba(128,126,128,1);
+  color:gray;
+  z-index: 4;
+}
+header a
+{
+  padding:12px;
+}
+header .form-control
+{
+  float: right !important;
+  max-width: 50%;
+  height:36px;
+}
+#search-button {
+  background-image: url(https://static.fcdn.co.il/dyn/projects/css/icons/searching-magnifying-glass-white.svg?0.1);
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: center;
+  width: 33px;
+  height:36px;
+  float: right;
+  cursor: pointer;
+  -webkit-border-radius: 20px 0 0 20px;
+  -moz-border-radius: 20px 0 0 20px;
+  border-radius: 20px 0 0 20px;
+  border:0;
+}
+header .fa
+{
+  font-size: 1.5em;
+  cursor: pointer;
+}
+header .profile
+{
+  min-height: 80px;
+}
+header .logo
+{
+  cursor: pointer;
+  width:60px;
+  height:60px;
+}
+header nav
+{
+  position: fixed;
+  width:100%;
+  top:80px;
+  right:0;
+  z-index: 999;
+  min-height: 50%;
+  background-color: gray;
+  display: none;
+}
+.container
+{
+  min-height: inherit;
+}
+main
+{
+  width:100%;
+  margin-top:100px;
+}
+.gridForFour
+{
+  display: grid;
+  grid-template-columns:repeat(4, 1fr);
+}

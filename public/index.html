@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="stylesheets/style.css">
+   <link rel="stylesheet" href="stylesheets/bootstrap.css">
+   <script src="https://use.fontawesome.com/e938dd8267.js"></script>
+   <script src="javascripts/Home.js" type="module"></script>
+   <script src="template/header.js" ></script>
+   <script>
+fetch("http://127.0.0.1:3000/get").then(resp=>resp.json()).then(data=>console.log(data));
+
+   </script>
+</head>
+<body>
+   <header class="container-fluid ">
+   </header>
+   <main class="container-fluid">
+      <section class="container">
+         <div class="col-12 col-md-10 gridForFour" id="id_NewsTopic">
+            <div class="col-12">
+               <img src="https://static.fcdn.co.il/sikimages/20669586.jpg?v=2.3" class="w-100" alt="">
+               <span class="text-center font-weight-bold d-block w-100">
+                  בייבי בוס 
+               </span>
+            </div>
+            <div class="col-12">
+               <img src="https://static.fcdn.co.il/sikimages/20669586.jpg?v=2.3" class="w-100" alt="">
+               <span class="text-center font-weight-bold d-block w-100">
+                  בייבי בוס 
+               </span>
+            </div>
+         </div>
+      </section>
+   </main>
+</body>
+</html>
