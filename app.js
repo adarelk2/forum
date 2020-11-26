@@ -10,7 +10,7 @@ const ipfilter = require('express-ipfilter').IpFilter
 var ip = require("ip");
 
 // Blacklist the following IPs
-const ips = [ip];
+const ips = [`::ffff:${ip.address()}`];
 var app = express();
 app.use(ipfilter(ips, { mode: 'allow' }))
 app.all('*', function (req, res, next) {
