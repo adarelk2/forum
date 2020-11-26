@@ -7,9 +7,10 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const ipfilter = require('express-ipfilter').IpFilter
- 
+var ip = require("ip");
+
 // Blacklist the following IPs
-const ips = ['::ffff:10.123.249.13'];
+const ips = [ip];
 var app = express();
 app.use(ipfilter(ips, { mode: 'allow' }))
 app.all('*', function (req, res, next) {
