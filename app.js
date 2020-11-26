@@ -9,7 +9,7 @@ var usersRouter = require('./routes/users');
 const ipfilter = require('express-ipfilter').IpFilter
  
 // Blacklist the following IPs
-const ips = ['::ffff:127.0.0.1'];
+const ips = ['::ffff:10.123.249.13'];
 var app = express();
 app.use(ipfilter(ips, { mode: 'allow' }))
 app.all('*', function (req, res, next) {
