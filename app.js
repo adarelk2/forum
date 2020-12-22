@@ -4,23 +4,15 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-const ipfilter = require('express-ipfilter').IpFilter
-var ip = require("ip");
+var forumsRouter = require('./routes/forums');
 
 // Blacklist the following IPs
 var app = express();
 
-const protectApi = async()=>
-{
-  let ipA = await ip.address();
-  const ips =await [`::ffff:${ipA}`];
-  console.log(ips);
-
   app.all('*', function (req, res, next) {
     if (!req.get('Origin')) return next();
-    res.set('Access-Control-Allow-Origin', 'https://adarforum.herokuapp.com');
+    res.set('Access-Control-Allow-Origin', '*');
     res.header("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE");
     res.set('Access-Control-Allow-Headers', 'X-Requested-With,Content-Type,x-auth-token');
     next();
@@ -35,9 +27,8 @@ const protectApi = async()=>
   app.use(express.urlencoded({ extended: false }));
   app.use(cookieParser());
   app.use(express.static(path.join(__dirname, 'public')));
-  
-  app.use('/get', indexRouter);
   app.use('/users', usersRouter);
+  app.use('/forums', forumsRouter);
   
   // catch 404 and forward to error handler
   app.use(function(req, res, next) {
@@ -54,8 +45,6 @@ const protectApi = async()=>
     res.status(err.status || 500);
     res.render('error');
   });
-}
-protectApi();
 
 
 module.exports = app;

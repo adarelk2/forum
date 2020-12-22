@@ -5,33 +5,88 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
    <link rel="stylesheet" href="stylesheets/style.css">
+   <link rel="stylesheet" href="stylesheets/responsive.css">
    <link rel="stylesheet" href="stylesheets/bootstrap.css">
    <script src="https://use.fontawesome.com/e938dd8267.js"></script>
-   <script src="javascripts/Home.js" type="module"></script>
+   <script src="javascripts/modules/Home.js" type="module"></script>
    <script src="template/header.js" ></script>
-   <script>
-fetch("https://adarforum.herokuapp.com/get").then(resp=>resp.json()).then(data=>console.log(data));
-
-   </script>
 </head>
 <body>
+   
    <header class="container-fluid ">
    </header>
-   <main class="container-fluid">
+   
+   <main class="container-fluid mb-5">
+      <section class="container mb-3">
+         <div class="col-12  m-auto text-center" id="id_NewsTopic">
+            <img src="https://miro.medium.com/max/1158/1*9EBHIOzhE1XfMYoKz1JcsQ.gif" class="text-center w-50" alt="Loading">
+         </div>
+      </section>
       <section class="container">
-         <div class="col-12 col-md-10 gridForFour" id="id_NewsTopic">
-            <div class="col-12">
-               <img src="https://static.fcdn.co.il/sikimages/20669586.jpg?v=2.3" class="w-100" alt="">
-               <span class="text-center font-weight-bold d-block w-100">
-                  בייבי בוס 
-               </span>
+         <h1 class="text-right mb-1">
+            מחפשים פורום בנושא מסוים? פורומים במגוון נושאים לבחירתכם
+         </h3>
+         <div class="col-12 gridForFive m-auto text-center" id="id_Forums">
+            <div class="col-12 p-2">
+               <div class="col-12 border pb-2 p-0">
+               <img src="https://static.fcdn.co.il/cats7/564.jpg" class="w-100" alt="">
+               <h4 class="text-white" style="background-color: #197dc1;">תחביבים</h4>
+               <a href="#">גינון וגידול צמחים</a>
+               <a href="#">תחביבים – כללי</a>
+               <a href="#">תנועות נוער ומחויבות אישית</a>
+               <a href="#">גינון וגידול צמחים</a>
+               <a href="#">תחביבים – כללי</a>
+               <a href="#">תנועות נוער ומחויבות אישית</a>
+               </div>            
             </div>
-            <div class="col-12">
-               <img src="https://static.fcdn.co.il/sikimages/20669586.jpg?v=2.3" class="w-100" alt="">
-               <span class="text-center font-weight-bold d-block w-100">
-                  בייבי בוס 
-               </span>
+            <div class="col-12 p-2">
+               <div class="col-12 border pb-2 p-0">
+               <img src="https://static.fcdn.co.il/cats7/252.jpg" class="w-100" alt="">
+               <h4 class="text-white" style="background-color: #197dc1;">תחביבים</h4>
+               <a href="#">גינון וגידול צמחים</a>
+               <a href="#">תחביבים – כללי</a>
+               <a href="#">תנועות נוער ומחויבות אישית</a>
+               <a href="#">גינון וגידול צמחים</a>
+               <a href="#">תחביבים – כללי</a>
+               <a href="#">תנועות נוער ומחויבות אישית</a>
             </div>
+         </div>
+         <div class="col-12 p-2">
+            <div class="col-12 border pb-2 p-0">
+            <img src="https://static.fcdn.co.il/cats7/78.jpg" class="w-100" alt="">
+            <h4 class="text-white" style="background-color: #197dc1;">תחביבים</h4>
+            <a href="#">גינון וגידול צמחים</a>
+            <a href="#">תחביבים – כללי</a>
+            <a href="#">תנועות נוער ומחויבות אישית</a>
+            <a href="#">גינון וגידול צמחים</a>
+            <a href="#">תחביבים – כללי</a>
+            <a href="#">תנועות נוער ומחויבות אישית</a>
+         </div>
+      </div>
+      <div class="col-12 p-2">
+         <div class="col-12 border pb-2 p-0">
+         <img src="https://static.fcdn.co.il/cats7/10.jpg" class="w-100" alt="">
+         <h4 class="text-white" style="background-color: #197dc1;">תחביבים</h4>
+         <a href="#">גינון וגידול צמחים</a>
+         <a href="#">תחביבים – כללי</a>
+         <a href="#">תנועות נוער ומחויבות אישית</a>
+         <a href="#">גינון וגידול צמחים</a>
+         <a href="#">תחביבים – כללי</a>
+         <a href="#">תנועות נוער ומחויבות אישית</a>
+      </div>
+   </div>
+   <div class="col-12 p-2">
+      <div class="col-12 border pb-2 p-0">
+      <img src="https://static.fcdn.co.il/cats7/454.jpg" class="w-100" alt="">
+      <h4 class="text-white" style="background-color: #197dc1;">תחביבים</h4>
+      <a href="#">גינון וגידול צמחים</a>
+      <a href="#">תחביבים – כללי</a>
+      <a href="#">תנועות נוער ומחויבות אישית</a>
+      <a href="#">גינון וגידול צמחים</a>
+      <a href="#">תחביבים – כללי</a>
+      <a href="#">תנועות נוער ומחויבות אישית</a>
+   </div>
+</div>
          </div>
       </section>
    </main>
